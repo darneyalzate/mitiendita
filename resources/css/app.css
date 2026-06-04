@@ -1,3 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+}
+
+@layer components {
+    /* Navbar mejorado */
+    nav {
+        backdrop-filter: blur(8px);
+        background-color: rgba(255, 255, 255, 0.95) !important;
+    }
+
+    /* Cards de productos */
+    .group.block {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        transition: all 0.2s ease;
+    }
+
+    .group.block:hover {
+        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.12);
+        transform: translateY(-2px);
+    }
+
+    /* Botones redondeados de categoría */
+    .rounded-full {
+        transition: all 0.15s ease;
+    }
+
+    /* Paginación */
+    nav[aria-label="Pagination"] span,
+    nav[aria-label="Pagination"] a {
+        border-radius: 0.5rem !important;
+        font-size: 0.875rem;
+    }
+}
+
+@layer utilities {
+    /* Fondo con textura sutil */
+    body {
+        background-color: #f8fafc;
+        background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+        background-size: 24px 24px;
+    }
+}
